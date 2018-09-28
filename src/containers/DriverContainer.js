@@ -19,7 +19,7 @@ class DriverContainer extends Component {
                     onAddColumnTag={onAddColumnTag}
                     onSearch={onSearch} />
                 <FeatureDriver columnTableReducer={columnTableReducer} onChangeColumn={onChangeColumn} />
-                <TableDrivers timesheetRecord={timesheetRecordReducer} searchTerm={searchTermReducer} />
+                <TableDrivers timesheetRecord={timesheetRecordReducer} searchTerm={searchTermReducer} columnTheads={columnTableReducer}/>
             </div>
         )
     }

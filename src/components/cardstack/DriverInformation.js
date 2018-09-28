@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import BasicInformation from '../DriverInformation/BasicInformation';
+import JobInformaion from '../DriverInformation/JobInformaion';
+import LicenseInformation from '../DriverInformation/LicenseInformation';
+import '../../App.css'
 
 class DriverInformation extends Component {
 
@@ -13,29 +17,9 @@ class DriverInformation extends Component {
                         <button type="button" className="btn btn-primary float-right">Save</button>
                         <button type="button" className="btn btn-outline-primary mr-2 float-right">Cancel</button>
                         <h3 className="card-title">Driver Information<i className="far fa-question-circle btn btn-lg"></i></h3>
-                        <div className='row'>
-                            <i className="fas fa-user-circle display-1 ml-3 col-2"></i>
-                            <div className="col-9 row">
-                                <div className="form-group col-4">
-                                    <label>First Name <i className="fas fa-star"></i></label>
-                                    <div className='input-group'>
-                                        <input type="text" className="form-control" name=''/>
-                                    </div>
-                                </div>
-                                <div className="form-group col-4">
-                                    <label>Last Name <i className="fas fa-star"></i></label>
-                                    <div className='input-group'>
-                                        <input type="text" className="form-control" name=''/>
-                                    </div>
-                                </div>
-                                <div className="form-group col-2">
-                                    <label>Initial <i className="fas fa-star"></i></label>
-                                    <div className='input-group'>
-                                        <input type="text" className="form-control" name=''/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <BasicInformation />
+                        <JobInformaion />
+                        <LicenseInformation />
                     </div>
                     : <React.Fragment></React.Fragment>}
             </div>

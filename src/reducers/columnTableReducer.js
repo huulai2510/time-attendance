@@ -24,10 +24,6 @@ const initialState = [
     {
         name: 'initial',
         status: false
-    },
-    {
-        name: 'temporary',
-        status: false
     }
 ]
 

@@ -11,7 +11,7 @@ const initialState = [
     },
     {
         name: 'status',
-        status: false
+        status: true
     },
     {
         name: 'jobClass',
@@ -19,14 +19,10 @@ const initialState = [
     },
     {
         name: 'birthday',
-        status: false
+        status: true
     },
     {
         name: 'initial',
-        status: false
-    },
-    {
-        name: 'temporary',
         status: false
     }
 ]

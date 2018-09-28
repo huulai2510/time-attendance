@@ -4,10 +4,10 @@ class FeatureDriver extends Component {
     render() {
         let { columnTableReducer } = this.props
         return (
-            <div className='w-100 mt-2'>
+            <div className='w-100 mt-2 pr-0'>
                 <button type="button" className="btn btn-primary mr-3">Add</button>
                 <button type="button" className="btn btn-primary mr-3">Deactive</button>
-                <div className="dropdown float-right mr-3">
+                <div className="dropdown float-right">
                     <button type="button" className="btn btn-primary float-right mr-3 dropdown-toggle" data-toggle="dropdown">
                         Column
                     </button>

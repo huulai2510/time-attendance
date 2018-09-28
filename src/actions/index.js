@@ -29,6 +29,7 @@ export const actAddColumnTag = name => {
 }
 
 export const actSearch = search => {
+    console.log(search)
     return {
         type: types.SEARCH,
         search

@@ -3,7 +3,10 @@ import * as types from '../constants/actionType'
 const initialState = {
     name: '',
     employeeID: '',
-    jobClass: ''
+    status: null,
+    jobClass: '',
+    birthday: '',
+    initial: ''
 }
 
 const searchTermReducer = (state = initialState, action) => {
