@@ -8,7 +8,7 @@ class ColumnTag extends Component {
         this.state = {
             name: '',
             employeeID: '',
-            status: null,
+            status: "null",
             jobClass: '',
             birthday: '',
             initial: ''
@@ -41,12 +41,12 @@ class ColumnTag extends Component {
                     <div className="form-group col-4" key={index}>
                         <label>{field.name}</label>
                         <div className='input-group'>
-                            {field.name !== 'status' ? <input type="text" className="form-control" name={field.name} value={this.state.tag} onChange={this.onChange} /> : 
-                            <select className="custom-select" name={field.name} value={this.state.tag} onChange={this.onChange} >
-                                <option value="null">all</option>
-                                <option value="true">active</option>
-                                <option value="false">not active</option>
-                            </select>}
+                            {field.name !== 'status' ? <input type="text" className="form-control" name={field.name} value={this.state.tag} onChange={this.onChange} /> :
+                                <select className="custom-select" name={field.name} value={this.state.status} onChange={this.onChange} >
+                                    <option value="null">all</option>
+                                    <option value="true">active</option>
+                                    <option value="false">not active</option>
+                                </select>}
                             <div className="input-group-append">
                                 <i className="fas fa-times-circle input-group-text btn" onClick={() => this.props.onDeleteColumnTag(field.name)}></i>
                             </div>
@@ -74,12 +74,10 @@ class ColumnTag extends Component {
         let target = e.target
         let name = target.name
         let value = target.value
-        if(value==='null'){
-            value=null
-        }else if(value==='true'){
-            value=true
-        }else if(value==='false'){
-            value=false
+        if  (value === 'true') {
+            value = true
+        } else if (value === 'false') {
+            value = false
         }
         this.setState({
             [name]: value

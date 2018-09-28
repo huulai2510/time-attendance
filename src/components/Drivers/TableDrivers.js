@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class TableDrivers extends Component {
 
-    render() {
+    render() {       
         let { timesheetRecord, searchTerm, columnTheads } = this.props
         return (
             <div className='mt-2 w-100'>
@@ -52,15 +52,14 @@ class TableDrivers extends Component {
     }
 
     filterTable = (timesheetRecord, searchTerm) => {
-        let result = null
-        
+        let result = null        
         result = timesheetRecord.filter(record => {
-            return  record.name.toLowerCase().indexOf(searchTerm.name.toLowerCase()) !== -1 
-                    && record.employeeID.indexOf(searchTerm.employeeID) !== -1 
+            return  record.name.toLowerCase().indexOf(searchTerm.name.toLowerCase()) !== -1  
+                    && record.employeeID.toLowerCase().indexOf(searchTerm.employeeID.toLowerCase()) !== -1
                     && record.jobClass.toLowerCase().indexOf(searchTerm.jobClass.toLowerCase()) !== -1
                     && record.birthday.indexOf(searchTerm.birthday) !== -1
                     && record.initial.toLowerCase().indexOf(searchTerm.initial.toLowerCase()) !== -1
-                    && searchTerm.status === null ? true : searchTerm.status === true ? record.status === true : record.status === false
+                    && (searchTerm.status === "null" ? true : searchTerm.status === true ? record.status === true : record.status === false)
                     
         })
         return result

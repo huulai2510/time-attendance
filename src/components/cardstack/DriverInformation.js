@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 import BasicInformation from '../DriverInformation/BasicInformation';
 import JobInformaion from '../DriverInformation/JobInformaion';
 import LicenseInformation from '../DriverInformation/LicenseInformation';
-import '../../App.css'
 
 class DriverInformation extends Component {
 
     render() {
         return (
             <div className="card">
-                <div className="card-header bg-primary text-white" onClick={() => !this.props.status ? this.props.changeStatus('DriverInformation') : ``}>
-                    Driver Information
+                <div className="card-header bg-primary text-white">
+                    <i className="far fa-window-maximize float-right fa-2x" onClick={() => this.props.changeSize()}></i>
+                    <h6 onClick={() => !this.props.status ? this.props.changeStatus('DriverInformation') : ''}>Driver Information</h6>
                 </div>
                 {this.props.status ?
                     <div className="card-body">

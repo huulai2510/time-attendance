@@ -6,7 +6,7 @@ class Qualifications extends Component {
         return (
             <div className="card">
                 <div className="card-header bg-primary text-white" onClick={() => !this.props.status ? this.props.changeStatus('Qualifications') : ``}>
-                    Qualifications
+                    <h6>Qualifications</h6>
                 </div>
                 {this.props.status ? <div className="card-body">
                     <h5 className="card-title">Special title treatment</h5>

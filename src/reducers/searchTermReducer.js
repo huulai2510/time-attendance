@@ -3,7 +3,7 @@ import * as types from '../constants/actionType'
 const initialState = {
     name: '',
     employeeID: '',
-    status: null,
+    status: "null",
     jobClass: '',
     birthday: '',
     initial: ''

@@ -3,6 +3,7 @@ import Nav from './components/Nav'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import routes from './routes/Routes'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
 
 class App extends Component {
     render() {

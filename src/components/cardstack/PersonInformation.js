@@ -6,7 +6,7 @@ class PersonInformation extends Component {
         return (
             <div className="card">
                 <div className="card-header bg-primary text-white" onClick={() => !this.props.status ? this.props.changeStatus('PersonInformation') : ``}>
-                    Person Information
+                    <h6>Person Information</h6>
                 </div>
                 {this.props.status ? <div className="card-body">
                     <h5 className="card-title">Special title treatment</h5>
